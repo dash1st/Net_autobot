@@ -37,7 +37,16 @@ def discover_cdp_nei():
 #useful for diagram
 #https://github.com/MJL85/natlas
 
-mydb = MySQLdb.connect(host="localhost",database="Inframon",user="root",password="tkfkqhwk")
+
+## BEFORE USE PLZ CHANGE ##
+
+host="localhost"
+database="DATABASE"
+user="USER"
+password = "PASSWORD"
+
+
+mydb = MySQLdb.connect(host,database,user,password)
 cursor = mydb.cursor()
 
 #cursor.execute("select con_ip, hostname from Netdev")
